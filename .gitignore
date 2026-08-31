@@ -7,3 +7,6 @@ dist
 
 # Juspay AI CLI — token-bearing configs; do not commit
 .vscode/mcp.json
+
+# API logs
+api/logs/

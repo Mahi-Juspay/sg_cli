@@ -48,6 +48,12 @@ export function findProduct(id) {
   return PRODUCTS.find((p) => p.id === id);
 }
 
+export async function fetchProducts() {
+  const res = await fetch('/api/products.php');
+  if (!res.ok) throw new Error('Failed to load products');
+  return res.json();
+}
+
 export const CURRENCY_SYMBOL = '₹';
 export const SHIPPING_FLAT = 5.0;
 
